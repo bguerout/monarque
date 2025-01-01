@@ -1,13 +1,32 @@
 {
   "name": "monarque",
   "version": "0.1.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "Benoît Guérout",
+  "license": "Apache-2.0",
   "description": "",
+  "bugs": {
+    "url": "https://github.com/bguerout/monarque/issues"
+  },
+  "homepage": "https://github.com/bguerout/monarque#readme",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "scripts": {
+    "build": "bash .tools/build.sh",
+    "hooks": "bash .tools/hooks.sh",
+    "lint": "eslint './**/*.ts'",
+    "release": "bash .tools/release.sh master",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
   "devDependencies": {
     "@types/mocha": "10.0.10",
     "@types/node": "22.10.2",
@@ -25,8 +44,5 @@
     "prettier": "3.4.2",
     "tsx": "4.19.2",
     "typescript": "5.7.2"
-  },
-  "prettier": {
-    "printWidth": 120
   }
 }

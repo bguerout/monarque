@@ -5,7 +5,6 @@
         "target": "esnext",
         "outDir": "./dist/mjs",
         "rootDirs": ["src"],
-        "typeRoots": ["./node_modules/@types", "./@types"],
         "types": ["node", "mocha"],
         "lib": ["esnext"],
         "allowJs": true,

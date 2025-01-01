@@ -2,9 +2,9 @@
   "root": true,
   "extends": [
     "eslint:recommended",
+    "plugin:node/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:node/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
@@ -33,6 +33,11 @@
     "quote-props": ["error", "consistent"],
     "mocha/no-skipped-tests": "warn",
     "mocha/no-exclusive-tests": "error",
+    "node/no-missing-import": [
+      "error", {
+        "tryExtensions": [".js", ".json", ".node", ".ts"]
+      }
+    ],
     "node/no-unsupported-features/es-syntax": [
       "error",
       {
